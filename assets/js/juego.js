@@ -138,12 +138,18 @@ const miModulo = (() => {
                 tituloModal.textContent = 'Perdiste...';
                 contModal.innerHTML = modalContenido("c");
                 myModal.toggle();
-            } else if ( puntosComputadora > 21 || puntosJugador === 21){
+            } else if ( puntosComputadora > 21 || puntosJugador > puntosComputadora){
                 /*Victoria*/
                 tituloModal.innerText = '¡Ganaste!';
                 contModal.innerHTML = modalContenido("j");
                 myModal.toggle();
-            } else {
+            } else if (puntosJugador === 21){
+                /*Blackjack*/
+                tituloModal.innerText = '¡Blackjack!';
+                contModal.innerHTML = modalContenido("j");
+                myModal.toggle();
+            } 
+            else {
                 /*Derrota*/
                 tituloModal.innerText = 'Perdiste...';
                 contModal.innerHTML = modalContenido("c");
