@@ -1,0 +1,208 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: #2F4F30;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor { 
+    height: 100%;
+    justify-content: center;
+}
+
+.titulo {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(23,28,23,1) 100%);
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    font-size: 25px;
+}
+
+.titulo-texto{
+    text-align: center;
+}
+
+.carta {
+    position: relative;
+    width: 7rem;
+    left: 100px;
+    margin-left: -75px;
+    animation-name: entrada;
+    animation-duration: .5s;
+    animation-direction: reverse;
+}
+.jugador {
+    padding: 8px;
+    background-color: #1a2c1b;
+    margin-top: 5px;
+    margin-right: 0;
+    box-shadow: 0px 0px 4px #0000003d;
+}
+
+
+.jugador-nombre {
+    color: white;
+    text-align: center;
+}
+
+#computadora-cartas, #jugador-cartas {
+    height: 12rem;
+    width: auto;
+    max-height: 100%;
+    
+}
+
+#divBotones{
+    position: fixed;
+    top: 82%;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btnNuevo, #btnPedir, #btnDetener {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 3px;
+    box-shadow: 0px 0px 4px #0000003d;
+    font-size: 1.5rem;
+}
+
+#btnPedir{
+    height: 5rem;
+    width: 5rem; 
+}
+
+.ganador {
+    background-color: var(--bs-success-bg-subtle);
+    animation-name: victoria;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: white;
+}
+
+
+.perdedor {
+    background-color: var(--bs-danger-bg-subtle);
+    animation-name: derrota;
+    animation-duration: 2s;
+    color: var(--bs-black);
+}
+
+
+@keyframes entrada {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes victoria {
+    0% {
+        background-color: var(--bs-success);
+    }
+    100% {
+        background-color: var(--bs-success-bg-subtle);
+    }
+}
+
+@keyframes derrota {
+    0% {
+        background-color: var(--bs-body-bg);
+        color: white;
+    }
+
+    100% {
+        background-color: var(--bs-danger-bg-subtle);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        margin: 0;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .card {
+        margin: 0;
+    }
+
+    .jugador {
+        display: block;
+        width: 45%;
+        height: 80%;
+        margin: 3rem;
+        padding: 2rem;
+        border-radius: 5%;
+    }
+
+    .jugador-nombre {
+        margin-bottom: 2rem;
+    }
+
+    .carta {
+        width: 12rem;
+        left: 8rem;
+        margin-left: -90px;
+    }
+
+    .resultado-panel{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .ganador {
+        width: 60%;
+    }
+
+    .perdedor {
+        width: 30%;
+    }
+
+    #jugador {
+        order: 1;
+    }
+
+    #computadora {
+        order: 3;
+    }
+
+    #divBotones {
+        position: relative;
+        top: 0;
+        order: 2;
+        flex-direction: column;
+    }
+
+    #btnNuevo, #btnPedir, #btnDetener{
+        margin: 2rem 0;
+        height: 5rem;
+        width: 5rem;
+        font-size: 2rem;
+    }
+
+    #btnPedir{
+        font-size: 3rem;
+        height: 10rem;
+        width: 10rem; 
+    }
+}

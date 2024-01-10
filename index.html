@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <header class="titulo bg-black">
+        <h1 class="titulo-texto">Blackjack</h1>
+    </header>
+    <main class="contenedor">
+
+        <div class="jugador" id="jugador">
+                <h1 class="jugador-nombre">Jugador - <span class="punto">0</span></h1>
+                <div id="jugador-cartas" class="divCartas">
+                    <!-- <img class="carta" src="assets/cartas/10D.png" alt=""> -->
+                </div>
+        </div>
+
+        <div class="jugador" id="computadora">
+                <h1 class="jugador-nombre">CPU - <span class="punto">0</span></h1>
+                <div id="computadora-cartas" class="divCartas">
+                    <!-- <img class="carta" src="assets/cartas/3H.png" alt=""> -->
+                </div>
+        </div>
+
+            <div id="divBotones" class="col text-center">
+                <button id="btnNuevo" class="btn btn-dark"><i class="bi bi-arrow-clockwise"></i></button>
+                <button id="btnPedir" disabled="disabled" class="btn btn-primary"><i class="bi bi-file-plus-fill"></i></button>
+                <button id="btnDetener" disabled="disabled" class="btn btn-danger"><i class="bi bi-stop-circle-fill"></i></button>
+            </div>
+
+        <div class="modal fade" id="resultados" data-bs-backdrop="static" data-bs-theme="dark" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center"">
+                <h3 class="modal-title fs-4 text-light text-center" id="resultados-titulo">Modal title</h1>
+                </div>
+                <div class="modal-body resultado-panel" id="contenido-modal">
+                ...
+                </div>
+                <div class="modal-footer justify-content-center">
+                <button id="btnNuevo" class="btn btn-light"><i class="bi bi-arrow-clockwise"></i></button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego.js"></script>
+    <!-- <script src="assets/js/modo.js"></script> -->
+    <script>
+
+        miModulo.nuevoJuego();
+
+    </script>
+</body>
+</html>
