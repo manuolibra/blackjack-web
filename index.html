@@ -10,21 +10,45 @@
 </head>
 <body>
     <header class="titulo bg-black">
-        <h1 class="titulo-texto">Blackjack</h1>
+        <div class="btn boton-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"><i class="bi bi-person-circle"></i></div>
+        <div class="titulo-texto"><h1>Blackjack</h1></div>
+        
     </header>
     <main class="contenedor">
 
-        <div class="jugador" id="jugador">
-                <h1 class="jugador-nombre">Jugador - <span class="punto">0</span></h1>
+        <div class="card jugador" id="jugador">
+            <div class="card-header jugador-header fs-3 text-center">
+                <div class="jugador-nombre">
+                    <h1 class="jugador-titulo">Jugador</h1> <h2 class="punto badge bg-success">0</h2>
+                </div>
+                
+                <div class="progress" role="progressbar" id="barra-jugador">
+                </div>   
+            </div>
+                
                 <div id="jugador-cartas" class="divCartas">
                     <!-- <img class="carta" src="assets/cartas/10D.png" alt=""> -->
                 </div>
+
+            <div class="card-footer jugador-puntaje">
+                <h3>Victorias: <span class="victorias">0</span></h3>
+            </div>
         </div>
 
-        <div class="jugador" id="computadora">
-                <h1 class="jugador-nombre">CPU - <span class="punto">0</span></h1>
+        <div class="card jugador" id="computadora">
+            
+            <div class="card-header jugador-header fs-3 text-center">
+                <div class="jugador-nombre">
+                    <h1 class="jugador-titulo">CPU</h1> <h2 class="punto badge bg-success">0</h2>
+                </div>
+                <div class="progress" role="progressbar" id="barra-cpu">
+                </div>
+            </div>
                 <div id="computadora-cartas" class="divCartas">
                     <!-- <img class="carta" src="assets/cartas/3H.png" alt=""> -->
+                </div>
+                <div class="card-footer jugador-puntaje">
+                    <h3>Victorias: <span class="victorias">0</span></h3> 
                 </div>
         </div>
 
@@ -32,24 +56,48 @@
                 <button id="btnNuevo" class="btn btn-dark"><i class="bi bi-arrow-clockwise"></i></button>
                 <button id="btnPedir" disabled="disabled" class="btn btn-primary"><i class="bi bi-file-plus-fill"></i></button>
                 <button id="btnDetener" disabled="disabled" class="btn btn-danger"><i class="bi bi-stop-circle-fill"></i></button>
-            </div>
+            </div>      
+    </main>
 
-        <div class="modal fade" id="resultados" data-bs-backdrop="static" data-bs-theme="dark" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal fade" id="resultados" data-bs-backdrop="static" data-bs-theme="dark" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header justify-content-center"">
-                <h3 class="modal-title fs-4 text-light text-center" id="resultados-titulo">Modal title</h1>
+                    <h3 class="modal-title fs-4 text-light text-center" id="resultados-titulo">Modal title</h1>
                 </div>
                 <div class="modal-body resultado-panel" id="contenido-modal">
-                ...
+                    ...
                 </div>
                 <div class="modal-footer justify-content-center">
-                <button id="btnNuevo" class="btn btn-light"><i class="bi bi-arrow-clockwise"></i></button>
+                    <button id="btnNuevo" class="btn btn-light btnModal"><i class="bi bi-arrow-clockwise"></i></button>
                 </div>
             </div>
-            </div>
         </div>
-    </main>
+    </div>
+
+    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-theme="dark" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="assets/js/underscore-min.js"></script>

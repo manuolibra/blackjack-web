@@ -16,43 +16,76 @@ body {
 }
 
 .titulo {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(23,28,23,1) 100%);
+    display: flex;
+    background: rgb(17, 17, 17);
     align-items: center;
     color: white;
     padding: 1rem;
     font-size: 25px;
+    justify-content: space-between;
 }
 
 .titulo-texto{
     text-align: center;
+    width: 100%;
+}
+
+.boton-menu{
+    width: auto;
+    font-size: 2rem;
+    padding: 0;
 }
 
 .carta {
     position: relative;
-    width: 7rem;
+    width: 5rem;
     left: 100px;
-    margin-left: -75px;
+    margin-top: 0.5rem;
+    margin-left: -50px;
     animation-name: entrada;
     animation-duration: .5s;
     animation-direction: reverse;
 }
+
 .jugador {
     padding: 8px;
     background-color: #1a2c1b;
-    margin-top: 5px;
-    margin-right: 0;
+    margin: 5px;
     box-shadow: 0px 0px 4px #0000003d;
 }
 
 
 .jugador-nombre {
+    display: flex;
     color: white;
     text-align: center;
+    align-items: center;
+    justify-content: space-around;
 }
 
-#computadora-cartas, #jugador-cartas {
-    height: 12rem;
+.punto {
+    font-size: 1.5rem;
+}
+
+
+
+.jugador-puntaje {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 0.3rem;
+}
+
+.jugador-header {
+    border-bottom: 0;
+    padding: 0.2rem;
+}
+
+.divCartas {
+    height: 8.5rem;
     width: auto;
     max-height: 100%;
     
@@ -60,7 +93,7 @@ body {
 
 #divBotones{
     position: fixed;
-    top: 82%;
+    top: 88%;
     width: 100%;
     display: flex;
     padding: 10px 0;
@@ -83,6 +116,14 @@ body {
     width: 5rem; 
 }
 
+.btnModal{
+     margin: 0 !important;
+}
+
+.jugador-resultados{
+    margin: 0.5rem;
+}
+
 .ganador {
     background-color: var(--bs-success-bg-subtle);
     animation-name: victoria;
@@ -98,6 +139,10 @@ body {
     animation-name: derrota;
     animation-duration: 2s;
     color: var(--bs-black);
+}
+
+.punto-final {
+    font-size: 4rem;
 }
 
 
@@ -142,11 +187,12 @@ body {
         margin: 0;
     }
 
+
     .jugador {
         display: block;
-        width: 45%;
-        height: 80%;
-        margin: 3rem;
+        width: 50%;
+        height: 75%;
+        margin: 4rem;
         padding: 2rem;
         border-radius: 5%;
     }
@@ -155,10 +201,16 @@ body {
         margin-bottom: 2rem;
     }
 
+
     .carta {
         width: 12rem;
         left: 8rem;
         margin-left: -90px;
+        margin-top: 2rem;
+    }
+
+    .punto {
+        font-size: 3rem;
     }
 
     .resultado-panel{
@@ -167,7 +219,7 @@ body {
     }
 
     .card {
-        width: 45%;
+        width: 40%;
     }
 
     .ganador {
@@ -186,11 +238,16 @@ body {
         order: 3;
     }
 
+    .divCartas {
+        height: 70%;
+    }
+
     #divBotones {
         position: relative;
         top: 0;
         order: 2;
         flex-direction: column;
+        justify-content: center;
     }
 
     #btnNuevo, #btnPedir, #btnDetener{
@@ -204,5 +261,9 @@ body {
         font-size: 3rem;
         height: 10rem;
         width: 10rem; 
+    }
+
+    .punto-final {
+        font-size: 6rem;
     }
 }
