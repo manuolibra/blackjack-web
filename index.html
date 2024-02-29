@@ -6,14 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/holo.css">
     <title>Blackjack</title>
 </head>
 <body>
-    <header class="titulo bg-black">
-        <div class="btn boton-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"><i class="bi bi-person-circle"></i></div>
-        <div class="titulo-texto"><h1>Blackjack</h1></div>
-        
-    </header>
+
     <main class="contenedor">
 
         <div class="card jugador" id="jugador">
@@ -56,7 +53,14 @@
                 <button id="btnNuevo" class="btn btn-dark"><i class="bi bi-arrow-clockwise"></i></button>
                 <button id="btnPedir" disabled="disabled" class="btn btn-primary"><i class="bi bi-file-plus-fill"></i></button>
                 <button id="btnDetener" disabled="disabled" class="btn btn-danger"><i class="bi bi-stop-circle-fill"></i></button>
-            </div>      
+            </div>
+
+        <header class="titulo bg-black">
+            <div class="btn boton-menu" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"><i class="bi bi-person-circle"></i></div>
+            <div class="titulo-texto"><h1>Blackjack</h1></div>
+                
+        </header>   
+            
     </main>
 
     <div class="modal fade" id="resultados" data-bs-backdrop="static" data-bs-theme="dark" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -75,29 +79,29 @@
         </div>
     </div>
 
-    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-theme="dark" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menú</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
+    
 
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div> -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">¡Hola, Jugador!</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="assets/js/underscore-min.js"></script>

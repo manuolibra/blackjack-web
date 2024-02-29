@@ -1,0 +1,9 @@
+.modal-content {
+    border: 0;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: inset 0px 32px 2px -29px rgba(189,189,189,1), 0px 0px 15px -3px rgba(0,0,0,0.75);
+}
+
+.modal-backdrop {
+    background-color: rgba(0,0,0,0.5);
+ }

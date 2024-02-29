@@ -1,22 +1,26 @@
 html {
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
 }
 
 body {
-    background-color: #2F4F30;
-    height: 100%;
+    background: #408a00;
+    background: radial-gradient(ellipse at center, #408a00 0%, #367202 31%, #295306 70%, #1f3b08 100%);
+    height: 100vh;
     padding: 0;
     margin: 0;
 }
 
+
 .contenedor { 
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    justify-content: center;
+    padding: 0;
 }
 
 .titulo {
     display: flex;
+    order: -1;
     background: rgb(17, 17, 17);
     align-items: center;
     color: white;
@@ -77,6 +81,7 @@ body {
     overflow: hidden;
     padding: 0;
     padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .jugador-header {
@@ -103,15 +108,29 @@ body {
 
 
 #btnNuevo, #btnPedir, #btnDetener {
-    border-radius: 50%;
+    border: 0;
+    border-radius: 5%;
     height: 4rem;
     width: 4rem;
     margin: 0 3px;
     box-shadow: 0px 0px 4px #0000003d;
     font-size: 1.5rem;
+    box-shadow: inset 0px 32px 2px -29px rgba(255, 255, 255,0.3), 0px 0px 15px -3px rgba(0,0,0,0.75);
+
+}
+
+
+
+#btnPedir:hover {
+    box-shadow: inset 0px 32px 2px -29px rgba(255, 255, 255,0.3), 0px 0px 5px 7px rgba(83, 223, 204, 0.2);
+}
+
+#btnPedir:active{
+    box-shadow: 0px 0px 5px 7px rgba(83, 223, 204, 0.5);
 }
 
 #btnPedir{
+    border-radius: 20%;
     height: 5rem;
     width: 5rem; 
 }
@@ -175,14 +194,23 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .contenedor {
-        display: flex;
         margin: 0;
         grid-template-columns: auto auto;
         justify-content: space-evenly;
         align-content: center;
+        flex-direction: row;
     }
+
+    .titulo {
+        position: absolute;
+        width: 100%;
+        bottom: 0%;
+        left: 0%;
+    }
+    
+
     .card {
         margin: 0;
     }
@@ -191,22 +219,22 @@ body {
     .jugador {
         display: block;
         width: 50%;
-        height: 75%;
-        margin: 4rem;
-        padding: 2rem;
+        height: 80%;
+        margin: 1rem;
+        padding: 3rem;
         border-radius: 5%;
     }
 
     .jugador-nombre {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
 
     .carta {
-        width: 12rem;
+        width: 10em;
         left: 8rem;
-        margin-left: -90px;
-        margin-top: 2rem;
+        margin-left: -6rem;
+        margin-top: 1.5rem;
     }
 
     .punto {
@@ -247,7 +275,7 @@ body {
         top: 0;
         order: 2;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
     }
 
     #btnNuevo, #btnPedir, #btnDetener{
@@ -265,5 +293,9 @@ body {
 
     .punto-final {
         font-size: 6rem;
+    }
+
+    .jugador-puntaje h3 {
+        font-size: 1.5rem;
     }
 }
